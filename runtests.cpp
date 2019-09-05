@@ -6,17 +6,10 @@
 #include "search.h"
 
 
-
-int main()
+int readFile(const std::vector<int>  &filename )
 {
-	std::vector<int> numbers;
-	std::ifstream fin ("numbers");
-	std::vector<int> search;
-	std::ifstream fon ("search");
-
-	numbers.reserve(1000000);
-	search.reserve(2000);
-
+	std::ifstream fin ("filename");
+	
 	while (true)
 	{
 		int val;
@@ -24,17 +17,22 @@ int main()
 		if(fin.eof())
 			break;
 		number.push_back(val);
-	}
+	};
 	
 	
-	while (true)
-	{
-		int num;
-		fon >> num;
-		if(fon.eof())
-			break;
-		search.push_back(num);
-	}
+
+}
+
+int main()
+{
+	std::vector<int> numbers;
+	std::vector<int> search;
+
+	numbers.reserve(1000000);
+	search.reserve(2000);
+
+	readFile(numbers);
+	readFile(search);
 	
 	// TODO:
 	// read the file "numbers" into the numbers vector
@@ -75,6 +73,37 @@ int main()
 
 	// TODO:
 	// repeat the above two blocks but use the binary search functions.
+	
+
+	{
+		Timer timer("Time to binary search all values: ");
+
+		int found = 0;
+		for (size_t i = 0; i < search.size(); i++)
+		{
+			if (binarySearch(numbers, search[i]))
+				found++;
+		}
+
+		std::cout << "Found "<< found << "/"
+			<< search.size() << " values." << std::endl;
+	}
+
+	{
+		Timer timer("Time to binary search all values (pointers): ");
+
+		int found = 0;
+		for (size_t i = 0; i < search.size(); i++)
+		{
+			if (binarySearch(numbers.data(), numbers.data() + numbers.size(),
+					search[i]))
+				found++;
+		}
+
+		std::cout << "Found "<< found << "/"
+			<< search.size() << " values." << std::endl;
+	}
+		
 
 	return 0;
 }
