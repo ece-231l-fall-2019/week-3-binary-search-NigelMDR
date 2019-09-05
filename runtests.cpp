@@ -5,17 +5,44 @@
 #include "Timer.h"
 #include "search.h"
 
+
+
 int main()
 {
 	std::vector<int> numbers;
+	std::ifstream fin ("numbers");
 	std::vector<int> search;
+	std::ifstream fon ("search");
 
+	numbers.reserve(1000000);
+	search.reserve(2000);
+
+	while (true)
+	{
+		int val;
+		fin >> val;
+		if(fin.eof())
+			break;
+		number.push_back(val);
+	}
+	
+	
+	while (true)
+	{
+		int num;
+		fon >> num;
+		if(fon.eof())
+			break;
+		search.push_back(num);
+	}
+	
 	// TODO:
 	// read the file "numbers" into the numbers vector
 	// read the file "search" into the search vector
 	// since you're basically doing the same thing twice,
 	// write a function to read a single file into a vector
 	// and then call this function twice.
+	
 
 	{
 		Timer timer("Time to linear search all values: ");
