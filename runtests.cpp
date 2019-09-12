@@ -6,34 +6,41 @@
 #include "search.h"
 
 
-int readFile(const std::vector<int>  &filename )
-{
-	std::ifstream fin ("filename");
-	
-	while (true)
-	{
-		int val;
-		fin >> val;
-		if(fin.eof())
-			break;
-		number.push_back(val);
-	};
-	
-	
+int File2Vector(const std::ifstream  &inputFile, std::vector<int> val);
 
-}
 
 int main()
 {
+	std::ifstream numbersFile ("numbers");
+	std::ifstream searchFile ("search");	
+
 	std::vector<int> numbers;
 	std::vector<int> search;
 
 	numbers.reserve(1000000);
 	search.reserve(2000);
 
-	readFile(numbers);
-	readFile(search);
+	while (true)
+	{
+		int val;
+		numbersFile >> val;
+		if (numbersFile.eof())
+			break;
+		numbers.push_back(val);
+	}
 	
+	while (true)
+	{
+		int val2;
+		searchFile >> val2;
+		if (searchFile.eof())
+			break;
+		search.push_back(val2);
+	}
+
+//	File2Vector( numbersFile, numbers );
+//	File2Vector( searchFile, search );
+
 	// TODO:
 	// read the file "numbers" into the numbers vector
 	// read the file "search" into the search vector
@@ -107,4 +114,28 @@ int main()
 
 	return 0;
 }
+/*
+int File2Vector(const std::ifstream &inputFile, std::vector<int> val)
+{
 
+	if (inputFile)	
+	{
+
+		while ( inputFile >> values )
+		{
+			val.push_back(value);
+		}		
+
+	}
+	while (true)
+	{	
+		int value;
+		inputFile >> value;
+		if(inputFile.eof())
+			break;
+		val.push_back(value);
+		i++;
+	};
+	return 0;
+}
+*/
