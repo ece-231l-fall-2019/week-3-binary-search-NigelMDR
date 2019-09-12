@@ -3,9 +3,9 @@
 bool linearSearch(const std::vector<int>& set, int value)
 {
 
-	for (int num = 0; num < size.set(); num++)
+	for (size_t num = 0; num < set.size(); num++)
 	{
-		if (set[num] == value);
+		if(set[num] == value)
 			return true;
 	} 	
 	
@@ -17,9 +17,10 @@ bool linearSearch(const std::vector<int>& set, int value)
 bool linearSearch(const int *begin, const int *end, int value)
 {
 
-	for ( ; begin <= end; *begin++ )
+	
+	for ( ; begin <= end;  begin++ )
 	{
-		if ( begin == value )
+		if ( *begin == value )
 			return true;
 	}
 
