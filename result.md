@@ -6,7 +6,7 @@ Results
 | Make Fast | Linear Functions | Binary Functions |
 | :---         |     :---:      |          ---: |
 | Reference    | 0.717598s      | 0.000344157s    |
-| Pointers     | (P) 0.737864s       |  (P)0.000384336s      |
+| Pointers     | (P) 0.737864s       |  (P) 0.000384336s      |
 
 <br/>
 
