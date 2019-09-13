@@ -9,7 +9,6 @@ Results
 | Pointers     | (P) 0.737864s       |  (P)0.000384336s      |
 
 <br/>
-<br/>
 
 ## Debugging Symbols  `-g`
 | Make | Linear Functions | Binary Functions |
@@ -22,33 +21,40 @@ Results
 
 <img align="right" width="200" height="100" src="https://www.geeksforgeeks.org/wp-content/uploads/Linear-Search.png">
 
-### Linear Functions
+## Linear Functions
 ```
-Hello Nigel
+Result Summary
 ```
-*I want you to create and submit a file called results.md which you talk about the results of executing your code. Talk about the differences in execution time between the two versions of the linear functions, the two versions of the binary functions, and the difference in execution time of linear vs. binary searches. Also, talk about the difference in execution time when the code is run with debugging symbols -g vs. with optimizations. This file will be 50% of your grade for this assignment.*
+*The elements of the array were searched by traversing the array from the "begin" to the "end" making the process of finding an element very slow. The pointer functions had a slightly better performance but not by much. The time difference was 0.020266 seconds making the pointer functions the best choice.*
 
 <br/>
 
 <img align="left" width="200" height="100" src="https://hackernoon.com/hn-images/1*DOR__3reJYPwGuyytG520g.jpeg">
 
-### Binary Functions
+## Binary Functions
 ```
-Hello Nigel
+Result Summary
 ```
-*I want you to create and submit a file called results.md which you talk about the results of executing your code. Talk about the differences in execution time between the two versions of the linear functions, the two versions of the binary functions, and the difference in execution time of linear vs. binary searches. Also, talk about the difference in execution time when the code is run with debugging symbols -g vs. with optimizations. This file will be 50% of your grade for this assignment.*
+*Elements in the array consumed less time when the position of a target value by repeatedly dividing the search interval in half. Making the process of finding an element very efficient. Compared to its pointer function counterpart the time difference between the two functions was 0.000040179 seconds.*
 
 <br/>
 
 <img align="right" width="200" height="100" src="https://techdifferences.com/wp-content/uploads/2017/08/featured2.jpg">
 
-### linear vs. binary searches
+## Debugging Symbols '-g' vs. Optimizations 'On'
 ```
-Hello Nigel
+Death Battle
 ```
-*I want you to create and submit a file called results.md which you talk about the results of executing your code. Talk about the differences in execution time between the two versions of the linear functions, the two versions of the binary functions, and the difference in execution time of linear vs. binary searches. Also, talk about the difference in execution time when the code is run with debugging symbols -g vs. with optimizations. This file will be 50% of your grade for this assignment.*
+*The time difference when for running 'optimization' and 'g' was 1.439 seconds to be exact. It would seem that when Debugging Symbols '-g' is used the performance takes a time hit but the results are the same regardless.*
 
-> Hello My name is bob 
+> :dog:
+
+<br/>
+
+## Table 
+| Real | Debugging Symbols '-g' | Optimizations 'On' | 
+| :---         |     :---:      |          ---: |
+| Time | 0m3.130s | 0m1.691s | 
 
 <br/>
 
