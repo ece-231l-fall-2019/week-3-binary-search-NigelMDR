@@ -49,7 +49,6 @@ Death Battle
 
 > :dog:
 
-<br/>
 
 ## Table 
 | Real | Debugging Symbols '-g' | Optimizations 'On' | 
