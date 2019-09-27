@@ -1,10 +1,13 @@
 #include <vector>
 #include "search.h"
 
-bool binarySearch(const std::vector<int>& set, int valueToFind)
+
+bool binarySearch(const std::vector<int>& set, int valueToFind )
 {
+
 	size_t begin = 0;
 	size_t end = set.size();
+
 
 	while (true)
 	{
@@ -21,6 +24,8 @@ bool binarySearch(const std::vector<int>& set, int valueToFind)
 		else
 			begin = mid + 1;	
 	}
+	// TODO::
+	// implement me
 	return false;
 }
 

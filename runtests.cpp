@@ -4,7 +4,7 @@
 
 #include "Timer.h"
 #include "search.h"
-
+#include "sort.h"
 
 int File2Vector(const std::ifstream  &inputFile, std::vector<int> val);
 
@@ -111,31 +111,31 @@ int main()
 			<< search.size() << " values." << std::endl;
 	}
 		
-
-	return 0;
-}
-/*
-int File2Vector(const std::ifstream &inputFile, std::vector<int> val)
-{
-
-	if (inputFile)	
 	{
+		Timer timer("Time to binary recursive search all values (pointers): ");
 
-		while ( inputFile >> values )
+		int found = 0;
+		for (size_t i = 0; i < search.size(); i++)
 		{
-			val.push_back(value);
-		}		
+			if (binarySearchRecursive(numbers.data(), numbers.data() + numbers.size(),
+					search[i]))
+				found++;
+		}
 
+		std::cout << "Found "<< found << "/"
+			<< search.size() << " values." << std::endl;	
 	}
-	while (true)
-	{	
-		int value;
-		inputFile >> value;
-		if(inputFile.eof())
-			break;
-		val.push_back(value);
-		i++;
-	};
+
+	{
+		Timer timer("bubbleSort: ");
+		bubblesort(search.data(), search.data() + search.size());
+	}
+/*  	  	for(int num : search) 
+    		{
+        		std::cout <<"[" << num <<"] " << std::endl;
+    		}		
+		std::cout << " " << std::endl;
+*/
 	return 0;
 }
-*/
+
